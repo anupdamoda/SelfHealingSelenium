@@ -50,7 +50,8 @@ public class WebScraperToCSVPartThree {
                         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
                         element.click();  // Example operation
                         System.out.println("Clicked element: " + text);
-                        driver.navigate().back();
+                        driver.get(url);
+                        Thread.sleep(3000);
                     } else {
                         System.out.println("Skipping element due to prediction: " + prediction);
                     }
